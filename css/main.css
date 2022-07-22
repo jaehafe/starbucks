@@ -6,6 +6,7 @@ body {
   line-height: 1.4;
   /* 바디 태그 안에 모두에 폰트 적용 */
   font-family: 'Nanum Gothic', sans-serif;
+  height: 3000px;
 }
 img {
   display: block;
@@ -18,10 +19,66 @@ a {
   margin: 0 auto;
   position: relative;
 }
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: .4s;
+}
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse {
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse:hover {
+  background-color: transparent;
+  color: #333;
+}
+.btn.btn--brown {
+  color: #592b18;
+  border-color: #592b18;
+}
+.btn.btn--brown:hover {
+  color: #fff;
+  background-color: #592B18;
+}
+.btn.btn--gold {
+  color: #D9AA8A;
+  border-color: #D9AA8A;
+}
+.btn.btn--gold:hover {
+  color: #fff;
+  border-color: #D9AA8A;
+}
+.btn.btn--white {
+  color: #fff;
+  border-color: #fff;
+}
+.btn.btn--white:hover {
+  color: #333;
+  border-color: #fff;
+}
+
 /* HEADER */
 header {
+  width: 100%;
   background-color: #f6f5f0;
   border-bottom: 1px solid #c8c8c8;
+  position: fixed;
+  top: 0;
+  /* 쌓임 순서 */
+  z-index: 9;
 }
 /* 자식요소인 inner 부분만 적용 */
 header > .inner {
@@ -187,4 +244,144 @@ header .main-menu .item .item__contents .contents__texture p {
   color: #669900;
   /* 상중하 */
   margin: 4px 0 14px;
+}
+header .badges {
+  position: absolute;  
+  top: 132px;
+  right: 12px;
+}
+header .badges .badge {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* VISUAL */
+.visual {
+ margin-top: 120px;
+ background-image: url("../images/visual_bg.jpg");
+ background-position: center;
+}
+.visual .inner{
+  height: 646px; 
+}
+.visual .inner .title{
+  position: absolute;
+  top: 88px;
+  left: -10px;
+}
+.visual .inner .title .btn{
+  position: absolute;
+  top: 259px;
+  left: 173px;
+}
+.visual .cup1.image{
+  position: absolute;
+  bottom: 0;
+  right: -47px;
+}
+.visual .cup1.text{
+  position: absolute;
+  top: 38px;
+  right: 171px;
+}
+.visual .cup2.image{
+  position: absolute;
+  bottom: 0;
+  right: 162px;
+}
+.visual .cup2.text{
+  position: absolute;
+  top: 321px;
+  right: 416px;
+}
+.visual .spoon{
+  position: absolute;
+  bottom: 0;
+  left: 275px;
+}
+.visual .fade-in {
+  opacity: 0;
+}
+
+
+/* NOTICE */
+.notice .notice-line {
+  position: relative;
+}
+.notice .notice-line .bg-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #333;
+}
+.notice .notice-line .bg-right {
+  /* 부모 요소를 기준으로 배치하겠다 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #f6f5ef;
+}
+.notice .notice-line .inner {
+  height: 62px;
+  display: flex;
+  /* 자식 요소들이 수평이 됨 */
+}
+.notice .notice-line .inner__left {
+  width: 60%;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  /* 수직정렬 */
+  align-items: center;
+}
+.notice .notice-line .inner__left h2 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.notice .notice-line .inner__left .swiper-container {
+  height: 62px;
+  background-color: orange;
+  flex-grow: 1;
+}
+.notice .notice-line .inner__left .notice-line__more {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notice .notice-line .inner__left .notice-line__more .material-icons{
+  color: #fff;
+  font-size: 30px;
+}
+.notice .notice-line .inner__right {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.notice .notice-line .inner__right h2 {
+  font-size: 17px;
+  font-weight: 700;
+}
+.notice .notice-line .inner__right .toggle-promotion {
+  width: 62px;
+  height: 62px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notice .notice-line .inner__right .toggle-promotion .material-icons{
+  font-size: 30px;
 }
