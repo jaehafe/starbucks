@@ -50,3 +50,12 @@ fadeEls.forEach(function (fadeEl, index) {
     opacity: 1
   });
 });
+
+
+// 
+// (요소, 지속시간, 옵션)
+new Swiper('.notice-line .swiper', {
+  direction: 'vertical',
+  autoplay: true,
+  loop: true
+});
