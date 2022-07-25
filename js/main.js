@@ -53,9 +53,14 @@ fadeEls.forEach(function (fadeEl, index) {
 
 
 // 
-// (요소, 지속시간, 옵션)
-new Swiper('.notice-line .swiper', {
+// new Swiper (요소, 지속시간, 옵션)
+new Swiper('.notice-line .swiper-container', {
   direction: 'vertical',
-  autoplay: true,
+  // autoplay: true,
   loop: true
+});
+new Swiper('.promotion .swiper-container', {
+  slidesPerview: 3, // 한번에 보여줄 슬라이드 개수
+  spaceBetween: 10, // 슬라이드 사이 여백
+  centerdSlides: true, // 1번 슬라이드가 가운데 보이기
 });
